@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "translate": [
+    "[data-test='global-nav'] [data-test='nav-link']",
+    "[data-test='home-hi']",
+    "[data-test='profile-language']",
+    "[data-test='skill-title']",
+    "[data-test='lesson-title']",
+    "[data-test='quit-button']",
+    "[data-test='practice-button']"
+  ],
+  "neverTranslate": [
+    "input",
+    "textarea",
+    "select",
+    "[contenteditable]",
+    "[data-test*='challenge'] [data-test*='sentence']",
+    "[data-test*='challenge'] [data-test*='prompt']",
+    "[data-test*='challenge-choice']",
+    "[data-test*='word-bank']",
+    "[data-test*='hint']",
+    "[data-test*='solution']",
+    "[data-test*='tips']",
+    "[data-test*='audio-transcript']",
+    "[class*='SpeechBubble']",
+    ".duo-fa-replaced"
+  ],
+  "exerciseRoots": [
+    "[data-test*='challenge']",
+    "[class*='Challenge']"
+  ]
+}

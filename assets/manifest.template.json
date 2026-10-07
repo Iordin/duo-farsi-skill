@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "duo-farsi — Persian translations for Duolingo",
+  "version": "1.0.0",
+  "description": "Replaces Duolingo UI text with Persian. Fully offline; never touches exercises.",
+  "default_locale": "fa",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.duolingo.com/*"],
+      "js": [
+        "src/content/shared/normalize.js",
+        "src/content/shared/storage.js",
+        "src/content/shared/selectors.js",
+        "src/content/dictionary.js",
+        "src/content/classifier.js",
+        "src/content/renderer.js",
+        "src/content/engine.js",
+        "src/content/index.js"
+      ],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dictionaries/dict-en-fa.json"],
+      "matches": ["https://www.duolingo.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "ترجمه‌های فارسی"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
